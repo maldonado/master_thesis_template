@@ -1,0 +1,103 @@
+\documentclass[12pt]{report}
+
+\usepackage{url}
+\usepackage{xspace}
+\usepackage{fancybox}
+\usepackage{cuthesis}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{makecell}
+\usepackage{csquotes}
+\usepackage{multirow}
+\usepackage{pdflscape}
+\usepackage{subfigure}
+
+
+
+\linespread{1.6}
+
+\author{Author Name Here}
+\title {Thesis Title Here}
+\degree{Master of Applied Science in Software Engineering}
+\dept  {Computer Science and Software Engineering}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% define commands for frequently used words or phrases
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \newcommand{\SATD}{self-admitted technical debt\xspace}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% define commands for your RQs
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\chapterIIIrqi}{\textbf{RQ: What are the types of self-admitted technical debt? How frequent are the different types of self-admitted technical debt in the studied projects ?}}
+\newcommand{\chapterIVrqi}{\textbf{RQ1. Is it possible to more accurately detect \SATD using NLP techniques?\\}}
+\newcommand{\chapterIVrqii}{\textbf{RQ2. What are the most impactful words in the classification of \SATD?\\}}
+\newcommand{\chapterIVrqiii}{\textbf{RQ3. How much training data is required to effectively detect \SATD?\\}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% define command to create a conclusion box to answer your RQs
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\conclusionbox}[1]{%
+    \vspace{6mm}
+    \framebox[0.95\textwidth][c]{%
+        \parbox[b]{0.92\textwidth}{%
+            {\it #1}
+        }
+    }
+    \vspace{6mm}
+}
+
+
+\begin{document}
+
+\begin{abstract}
+
+Thesis abstract.
+
+\end{abstract}
+
+\begin{acknowledgments}
+
+Thesis acknowledgments.
+
+\end{acknowledgments}
+
+\begin{publications}
+
+The following publications are related to this thesis:
+
+\begin{enumerate}
+
+\item \textbf{Everton da S. Maldonado} and Emad Shihab. Detecting and Quantifying Different Types of Self-Admitted Technical Debt. In \textit{Proceedings of the 7th IEEE International Workshop on Managing Technical Debt}, 7 pages, 2015. [Chapter 3]
+
+\item \textbf{Everton da S. Maldonado}, Emad Shihab and Nikolaos Tsantalis. Using Natural Language Processing to Automatically Detected Self-Admitted Technical Debt. In \textit{IEEE Transactions on Software Engineering}, 20 pages, Major revision submitted August 2016. [Chapter 4] 
+
+\end{enumerate}
+
+\end{publications}
+
+\chapter{Introduction}
+\label{introduction}
+\input{introduction.tex}
+
+\chapter{Literature Review}
+\label{literature_review}
+\input{literature_review.tex}
+
+\chapter{Chapter 3 Title}
+\label{chapter3}
+\input{chapter3.tex}
+
+\chapter{Chapter 4 Title}
+\label{chapter4}
+\input{chapter4.tex}
+
+\chapter{Summary, Contributions and Future Work}
+\label{conclusion}
+\input{conclusion.tex}
+
+\addcontentsline{toc}{chapter}{Bibliography}
+\bibliography{bibliography.bib}  
+\bibliographystyle{alpha}
+\end{document}
